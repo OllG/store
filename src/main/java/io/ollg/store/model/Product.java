@@ -1,4 +1,4 @@
-package model;
+package io.ollg.store.model;
 
 public class Product {
     private Integer id;

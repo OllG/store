@@ -1,4 +1,4 @@
-package model;
+package io.ollg.store.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;

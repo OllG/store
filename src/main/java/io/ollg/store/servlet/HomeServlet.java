@@ -1,6 +1,4 @@
-package servlet;
-
-import model.Product;
+package io.ollg.store.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
