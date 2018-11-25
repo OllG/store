@@ -20,9 +20,11 @@ public class LibraryServlet extends HttpServlet {
         req.getRequestDispatcher("library.jsp").forward(req, resp);
     }
 
-    public LibraryServlet() {
+    @Override
+    public void init() throws ServletException {
         populate();
     }
+
     private void populate(){
         library.addNewProduct("Lampka", 10000);
         library.addNewProduct("Krzeslo", 5000);
