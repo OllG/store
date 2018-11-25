@@ -14,7 +14,6 @@ public class CartServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         Cart cart;
         if(req.getSession().getAttribute("cart") == null){
             cart = new Cart();

@@ -7,7 +7,7 @@
 </head>
 <body>
     ${product.name}<br/>
-    ${product.price/100}pln<br/>
+    ${product.price/100}PLN<br/>
     <form method="post">
         <input type="hidden" name="id" value="${product.id}"/>
         <input type="number" name="amount" value="1"/>
