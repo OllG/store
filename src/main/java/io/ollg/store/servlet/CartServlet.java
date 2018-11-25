@@ -16,10 +16,10 @@ public class CartServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Cart cart;
-        if(!Cart.class.equals(req.getSession().getAttribute("cart").getClass())){
+        if(req.getSession().getAttribute("cart") == null){
             cart = new Cart();
             req.getSession().setAttribute("cart", cart);
-            //aaa
+            req.setAttribute("cartItems", cart.getItems());
         } else {
             cart = (Cart) req.getSession().getAttribute("cart");
             req.setAttribute("cartItems", cart.getItems());
