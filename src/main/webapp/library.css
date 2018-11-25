@@ -2,6 +2,8 @@ td.name{
     width: 150px;
 }
 
-td.price{
+td.price {
     width: 80px;
+    text-align: right;
 }
+ 

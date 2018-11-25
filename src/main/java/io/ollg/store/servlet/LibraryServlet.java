@@ -23,9 +23,8 @@ public class LibraryServlet extends HttpServlet {
     public LibraryServlet() {
         populate();
     }
-
     private void populate(){
-        library.addNewProduct("Lampka", 5000);
+        library.addNewProduct("Lampka", 10000);
         library.addNewProduct("Krzeslo", 5000);
         library.addNewProduct("Stol", 20000);
     }

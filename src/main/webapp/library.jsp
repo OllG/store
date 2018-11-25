@@ -14,11 +14,13 @@
                     <a href="product?id=${product.id}">${product.name}</a>
                 </td>
                 <td class="price">
-                    ${product.price/100} pln
+                    ${product.price/100} PLN
                 </td>
             </tr>
         </c:forEach>
-        <a href="home">Wstecz</a>
     </table>
+    <br/>
+    <a href="cart">Koszyk</a><br/>
+    <a href="home">Wstecz</a>
 </body>
 </html>

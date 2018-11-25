@@ -1,8 +1,8 @@
 package io.ollg.store.model;
 
 public class CartItem {
-    Product product;
-    int amount;
+    private Product product;
+    private int amount;
 
     public CartItem(Product product, int amount) {
         this.product = product;
@@ -21,11 +21,7 @@ public class CartItem {
         this.amount += amount;
     }
 
-    public void decreaseAmount(int amount){
-        if(this.amount < amount) {
-            this.amount=0;
-        }else {
-            this.amount -= amount;
-        }
+    public void setAmount(int amount){
+        this.amount = amount;
     }
 }
