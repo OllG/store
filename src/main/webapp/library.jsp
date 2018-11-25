@@ -8,6 +8,16 @@
 </head>
 <body>
     <table>
+        <thead>
+            <tr>
+                <td class="name">
+                    Nazwa produktu:
+                </td>
+                <td class="price">
+                    Cena:
+                </td>
+            </tr>
+        </thead>
         <c:forEach items="${library}" var="product">
             <tr>
                 <td class="name">
@@ -21,6 +31,9 @@
     </table>
     <br/>
     <a href="cart">Koszyk</a><br/>
-    <a href="home">Wstecz</a>
+    <a href="home">Wstecz</a><br/>
+<c:if test="${authenticated != null}">
+    <a href="createNewProduct">Dodaj nowy produkt</a>
+</c:if>
 </body>
 </html>
