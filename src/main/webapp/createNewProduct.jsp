@@ -1,11 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Olgierd
-  Date: 2018-11-25
-  Time: 10:01
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>Stworz nowy produkt</title>
@@ -16,5 +11,11 @@
         <input type="number" step="0.01" name="price" placeholder="Cena">
         <input type="submit">
     </form>
+
+<c:if test="${newId != null}">
+    Id nowego produktu to: ${newId}
+</c:if>
+<br/>
+<a href="library">Wstecz</a>
 </body>
 </html>

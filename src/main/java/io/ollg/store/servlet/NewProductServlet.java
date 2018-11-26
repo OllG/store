@@ -15,6 +15,11 @@ public class NewProductServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        if(req.getParameter("newId") != null){
+            Integer newId = Integer.valueOf(req.getParameter("newId"));
+            req.setAttribute("newId", newId);
+        }
         req.getRequestDispatcher("createNewProduct.jsp").forward(req, resp);
     }
 
@@ -25,6 +30,7 @@ public class NewProductServlet extends HttpServlet {
         int newPrice = (int)((inputPrice * 100) + 0.5);
 
         Integer newId = library.addNewProduct(name, newPrice);
-        resp.sendRedirect("./product?id=" + newId);
+        req.setAttribute("newId", newId);
+        resp.sendRedirect("./createNewProduct?newId=" + newId);
     }
 }

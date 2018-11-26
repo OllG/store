@@ -32,8 +32,12 @@
     <br/>
     <a href="cart">Koszyk</a><br/>
     <a href="home">Wstecz</a><br/>
-<c:if test="${authenticated != null}">
+<c:if test="${authenticated == true}">
     <a href="createNewProduct">Dodaj nowy produkt</a>
+</c:if>
+<br/>
+<c:if test="${authenticated != true}">
+    <a href="login">Zaloguj sie sie do panelu administratora</a>
 </c:if>
 </body>
 </html>
